@@ -1,0 +1,87 @@
+svg{
+    width: 24px;
+    height: 24px;
+}
+body{
+    --accent-color : orangered;
+    --background-color : azure;
+    --text-color : black;
+    --button-text-color : var(--background-color);
+    --transition-delay : 1.1s;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: var(--transition-delay);
+    overflow: hidden;
+
+}
+body.dark{
+    --accent-color : #d0d066;
+    --background-color : #333;
+    --text-color : azure;
+}
+.title{
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+.theme-toggle-button{
+    background-color: var(--accent-color);
+    color: var(--button-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: .5em 1em;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    transform: scale(1);
+    transition: var(--transition-delay);
+    
+}
+.theme-toggle-button:hover{
+    transform: scale(1.1);
+}
+.theme-toggle-button .icon{
+    margin-right: 0.5em;
+}
+.sun-moon-container{
+    --rotation:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    height: 200vmin;
+    transform: rotate(calc(var(--rotation)*1deg));
+    transition : transform var(--transition-delay)
+}
+
+.sun{
+    top: 5%;
+    opacity: 1;
+}
+.moon{
+    opacity: 0;
+    bottom: 5%;
+    transform: rotate(180deg);
+}
+.sun,.moon{
+    position: absolute;
+    transition: opacity, fill, var(--transition-delay);
+    width: 30px;
+    height: 30px;
+    fill: var(--accent-color);
+}
+.dark .sun{
+    opacity: 0;
+}
+.dark .moon{
+    opacity: 1;
+}
