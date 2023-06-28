@@ -99,6 +99,7 @@ body.dark{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    flex-wrap : wrap;
 }
 .para-container .paragraph{
     margin-bottom: 5rem;
