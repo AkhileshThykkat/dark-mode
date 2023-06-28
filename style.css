@@ -8,6 +8,8 @@ body{
     --text-color : black;
     --button-text-color : var(--background-color);
     --transition-delay : 1.1s;
+    --para-background : rgb(108, 108, 139);
+    --para-text : azure;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -24,6 +26,8 @@ body.dark{
     --accent-color : #7dd3fc;
     --background-color : #6366f1;
     --text-color : azure;
+    --para-background : blanchedalmond;
+    --para-text:#9333ea;
 }
 .title{
     margin: 0;
@@ -46,6 +50,7 @@ body.dark{
 }
 .theme-toggle-button:hover{
     transform: scale(1.1);
+    
 }
 .theme-toggle-button .icon{
     margin-right: 0.5em;
@@ -84,4 +89,16 @@ body.dark{
 }
 .dark .moon{
     opacity: 1;
+}
+.para-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.para-container .paragraph{
+    margin-bottom: 5rem;
+    padding: 50px;
+    background-color: var(--para-background);
+    color :  var(--para-text);
 }
